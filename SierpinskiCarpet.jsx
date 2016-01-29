@@ -49,15 +49,7 @@ SierpinskiCarpet = React.createClass({
 		window.setTimeout( function () { drawCarpet(n + 1,[cx - length, cy - length], length/3, i + 1)}, 1600 + (i * 1600));
 	    }
 
-	}
-		
-
-	
-
-	
-
-	
-	
+	}	
 
     },
     
@@ -74,8 +66,12 @@ SierpinskiCarpet = React.createClass({
 
 	return(
 	    <div textAlign = "center" >
+	      <form method="POST">
+		<button onclick={this.drawSCarpet}>Randomize Colours</button>
+	      </form>
 	      <svg id="scarpet" width="600" height="600" style = {this.svgStyle}>
 	      </svg>
+	      
 	    </div>
 	);
 
